@@ -3,7 +3,7 @@ import 'dart:ui' show lerpDouble;
 import 'package:flutter/animation.dart' show Curves;
 import 'package:flutter/cupertino.dart' show CupertinoTheme;
 import 'package:flutter/foundation.dart' show kIsWeb;
-import 'package:flutter/material.dart' show Theme;
+import 'package:flutter/material.dart' show Theme, View;
 import 'package:flutter/scheduler.dart' show SchedulerBinding;
 import 'package:flutter/services.dart';
 
