@@ -66,6 +66,7 @@ mixin RawEditorStateTextInputClientMixin on EditorState
               CupertinoTheme.maybeBrightnessOf(context) ??
               Theme.of(context).brightness,
           textCapitalization: widget.configurations.textCapitalization,
+          viewId: View.of(context).viewId,
           allowedMimeTypes:
               widget.configurations.contentInsertionConfiguration == null
                   ? const <String>[]
