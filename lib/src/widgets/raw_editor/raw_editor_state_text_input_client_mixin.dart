@@ -3,7 +3,7 @@ import 'dart:ui' show lerpDouble;
 import 'package:flutter/animation.dart' show Curves;
 import 'package:flutter/cupertino.dart' show CupertinoTheme;
 import 'package:flutter/foundation.dart' show kIsWeb;
-import 'package:flutter/material.dart' show Theme;
+import 'package:flutter/material.dart' show Theme, View;
 import 'package:flutter/scheduler.dart' show SchedulerBinding;
 import 'package:flutter/services.dart';
 
@@ -66,6 +66,7 @@ mixin RawEditorStateTextInputClientMixin on EditorState
               CupertinoTheme.maybeBrightnessOf(context) ??
               Theme.of(context).brightness,
           textCapitalization: widget.configurations.textCapitalization,
+          viewId: View.of(context).viewId,
           allowedMimeTypes:
               widget.configurations.contentInsertionConfiguration == null
                   ? const <String>[]
