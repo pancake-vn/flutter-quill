@@ -1235,6 +1235,7 @@ class QuillRawEditorState extends EditorState
     _clipboardStatus
       ..removeListener(_onChangedClipboardStatus)
       ..dispose();
+    WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
 
