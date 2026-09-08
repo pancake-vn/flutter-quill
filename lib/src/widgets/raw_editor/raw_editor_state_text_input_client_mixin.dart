@@ -244,6 +244,12 @@ mixin RawEditorStateTextInputClientMixin on EditorState
     // no-op
   }
 
+  /// Added for Flutter 3.44+: `TextInputClient` gained `onFocusReceived`, and
+  /// this mixin `implements` the interface, so it must supply the member.
+  /// `false` preserves the pre-3.44 behaviour of ignoring platform focus events.
+  @override
+  bool onFocusReceived() => false;
+
   @override
   void performPrivateCommand(String action, Map<String, dynamic> data) {
     // no-op
